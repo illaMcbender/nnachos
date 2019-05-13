@@ -1,0 +1,54 @@
+close.o: close.c
+        $(CC) $(CFLAGS) -c close.c
+close: close.o start.o
+        $(LD) $(LDFLAGS) start.o close.o -o close.coff
+        ../bin/coff2noff close.coff close
+
+create.o: create.c
+        $(CC) $(CFLAGS) -c create.c
+create: create.o start.o
+        $(LD) $(LDFLAGS) start.o create.o -o create.coff
+        ../bin/coff2noff create.coff create
+
+read.o: read.c
+        $(CC) $(CFLAGS) -c read.c
+read: read.o start.o
+        $(LD) $(LDFLAGS) start.o read.o -o read.coff
+        ../bin/coff2noff read.coff read
+
+open.o: open.c
+        $(CC) $(CFLAGS) -c open.c
+open: open.o start.o
+        $(LD) $(LDFLAGS) start.o open.o -o open.coff
+        ../bin/coff2noff open.coff open
+
+write.o: write.c
+        $(CC) $(CFLAGS) -c write.c
+write: write.o start.o
+        $(LD) $(LDFLAGS) start.o write.o -o write.coff
+        ../bin/coff2noff write.coff write
+
+exec.o: exec.c
+        $(CC) $(CFLAGS) -c exec.c
+exec: exec.o start.o
+        $(LD) $(LDFLAGS) start.o exec.o -o exec.coff
+        ../bin/coff2noff exec.coff exec
+
+fork.o: fork.c
+        $(CC) $(CFLAGS) -c fork.c
+fork: fork.o start.o
+        $(LD) $(LDFLAGS) start.o fork.o -o fork.coff
+        ../bin/coff2noff fork.coff fork
+
+join.o: join.c
+        $(CC) $(CFLAGS) -c join.c
+join: join.o start.o
+        $(LD) $(LDFLAGS) start.o join.o -o join.coff
+        ../bin/coff2noff join.coff join
+
+yield.o: yield.c
+        $(CC) $(CFLAGS) -c yield.c
+yield: yield.o start.o
+        $(LD) $(LDFLAGS) start.o yield.o -o yield.coff
+        ../bin/coff2noff yield.coff yield
+
